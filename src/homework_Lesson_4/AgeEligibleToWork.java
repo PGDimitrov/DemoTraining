@@ -16,6 +16,10 @@ public class AgeEligibleToWork {
             System.out.println("You are eligible to work.");
         }
 
+        else if (userAge <0 ){
+            System.out.println("Please enter a positive age value!");
+        }
+
         else {
             System.out.println("You are not eligible to work.");
         }
