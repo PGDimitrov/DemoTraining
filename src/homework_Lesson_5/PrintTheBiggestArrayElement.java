@@ -8,9 +8,10 @@ public class PrintTheBiggestArrayElement {
 
         //Find the biggest element of an array and print it in the console.
 
-        int [] array = {10, 70, 30, 60, 50};
+        //int [] array = {10, 70, 30, 60, 50};
+        int [] array = {-10, -70, -30, -60, -50};
 
-        int max = 0;
+        int max = array[0];
 
         System.out.println("The initial array is: " + Arrays.toString(array));
 
