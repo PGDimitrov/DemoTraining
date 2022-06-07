@@ -2,6 +2,7 @@ package homework_Lesson_07;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class fixThisCode {
@@ -29,7 +30,8 @@ public class fixThisCode {
         public static void printToFile(FileWriter fileWriter, String text, int repeat) {
             for (int i = 0; i < repeat; i++) {
                 try {
-                    fileWriter.write(text + "\n");
+                    fileWriter.append(text).append("\n");
+                    fileWriter.flush();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -37,10 +39,18 @@ public class fixThisCode {
         }
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
-            String filePath = scanner.nextLine();
-            int howManyTimesToPrintTheTextToFile = scanner.nextInt();
-            String textToAdd = scanner.nextLine();
-            printToFile(getFileWriter(filePath), textToAdd, howManyTimesToPrintTheTextToFile);
+            try {
+                System.out.println("Enter file name and path: ");
+                String filePath = scanner.nextLine();
+                System.out.println("Enter text content for the file: ");
+                String textToAdd = scanner.nextLine();
+                System.out.println("Enter int number: ");
+                int howManyTimesToPrintTheTextToFile = scanner.nextInt();
+                printToFile(getFileWriter(filePath), textToAdd, howManyTimesToPrintTheTextToFile);
+                closeFileWriter(getFileWriter(filePath));
+            } catch (InputMismatchException ime) {
+                System.out.println("Enter integer number how many times to copy the text to the file.");
+            }
         }
 }
 
