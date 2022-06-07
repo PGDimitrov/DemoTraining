@@ -1,4 +1,4 @@
-package homework_Lesson_07;
+package homework_Lesson_7;
 
 public class Constructors_Exercise {
 
