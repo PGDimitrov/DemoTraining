@@ -11,21 +11,21 @@ public class Main {
         employee.getName();
         employee.getAnnualSalary();
         System.out.println();
-        employee.raiseSalary();
+        employee.raiseSalary(5);
 
         System.out.println();
         System.out.println(employee2);
         employee2.getName();
         employee2.getAnnualSalary();
         System.out.println();
-        employee2.raiseSalary();
+        employee2.raiseSalary(10);
 
         System.out.println();
         System.out.println(employee3);
         employee3.getName();
         employee3.getAnnualSalary();
         System.out.println();
-        employee3.raiseSalary();
+        employee3.raiseSalary(0);
 
     }
 }

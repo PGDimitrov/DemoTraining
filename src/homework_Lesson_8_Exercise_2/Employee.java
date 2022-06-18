@@ -5,9 +5,9 @@ public class Employee {
     private int id;
     private String firstName;
     private String lastName;
-    private int salaryPerMonth;
+    private double salaryPerMonth;
 
-    public void setSalaryPerMonth(int salaryPerMonth) {
+    public void setSalaryPerMonth(double salaryPerMonth) {
         this.salaryPerMonth = salaryPerMonth;
     }
 
@@ -23,7 +23,7 @@ public class Employee {
         return lastName;
     }
 
-    public int getSalaryPerMonth() {
+    public double getSalaryPerMonth() {
         return salaryPerMonth;
     }
 
@@ -52,9 +52,10 @@ public class Employee {
         System.out.printf("%s %s, annual salary is: " + 12*getSalaryPerMonth(), getFirstName(), getLastName());
     }
 
-    public void raiseSalary () {
-        double i= 0.1; //x% modify current salary
-        double raiseSalary = salaryPerMonth*12 + (getSalaryPerMonth()*i)*12;
-        System.out.println("The updated annual salary is: " + raiseSalary);
+    public void raiseSalary (double percentageUpdate) {
+        salaryPerMonth = salaryPerMonth + (salaryPerMonth * percentageUpdate/100);
+        System.out.println("Updated monthly salary is: " + salaryPerMonth);
+        System.out.println("Updated annual salary is: " +salaryPerMonth*12);
     }
+
 }

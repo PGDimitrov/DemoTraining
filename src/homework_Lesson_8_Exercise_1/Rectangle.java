@@ -21,11 +21,13 @@ public class Rectangle extends Shape{
         this.length = length;
     }
 
-    public Rectangle(String color, boolean filled, double width, double length) {
+    public Rectangle(double width, double length, String color, boolean filled ) {
         super(color, filled);
         this.width = width;
         this.length = length;
     }
+
+    public Rectangle(String color, boolean filled) { super(color, filled);}
 
     @Override
     public double getArea() {
@@ -37,4 +39,11 @@ public class Rectangle extends Shape{
         return (width + length)*2;
     }
 
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "width=" + width +
+                ", length=" + length +
+                '}';
+    }
 }

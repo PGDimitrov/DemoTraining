@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Shape s1 = new Circle("red", false, 5.5);  // Upcast Circle to Shape
+        Shape s1 = new Circle(5.5, "red", true);  // Upcast Circle to Shape
 
         System.out.println(s1);
         System.out.println(s1.getArea());
@@ -26,7 +26,7 @@ public class Main {
         System.out.println();
         //Shape s2 = new Shape(); // Abstract class cannot be instanciated
 
-        Shape s3 = new Rectangle("red", false, 1.0, 2.0);   // Upcast
+        Shape s3 = new Rectangle(1.0, 2.0, "red", false);   // Upcast
         System.out.println(s3);
         System.out.println(s3.getArea());
         System.out.println(s3.getPerimeter());
@@ -42,7 +42,7 @@ public class Main {
         System.out.println(r1.getLength());
 
         System.out.println();
-        Shape s4 = new Square("red", true, 6.6, 6.6, 6.6);     // Upcast
+        Shape s4 = new Square(6.6, "red", true);     // Upcast
         System.out.println(s4);
         System.out.println(s4.getArea());
         System.out.println(s4.getColor());

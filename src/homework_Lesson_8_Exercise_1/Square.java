@@ -11,8 +11,8 @@ public class Square extends Rectangle{
         this.side = side;
     }
 
-    public Square(String color, boolean filled, double width, double length, double side) {
-        super(color, filled, width, length);
+    public Square(double side, String color, boolean filled) {
+        super(color, filled);
         this.side = side;
     }
 
@@ -26,4 +26,10 @@ public class Square extends Rectangle{
         return side*4;
     }
 
+    @Override
+    public String toString() {
+        return "Square{" +
+                "side=" + side +
+                '}';
+    }
 }
